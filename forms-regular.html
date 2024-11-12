@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/layout-dashboard.svg"
+      type="image/x-icon"
+    />
+    <!-- graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--google font link-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./forms.css" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <title>dashboard</title>
+  </head>
+
+  <body>
+    <!-- sidebar section starts -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="https://demos.creative-tim.com/material-dashboard-pro-angular2/assets/img/angular2-logo-white.png"
+          alt="logo"
+        />
+        <h2>Creative Tim</h2>
+      </div>
+      <ul class="sidebar-links" style="padding-left: 0">
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Main Menu</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <!-- Dashboard -->
+        <li>
+          <a href="index.html">
+            <span class="material-symbols-outlined"> dashboard </span>Dashboard
+          </a>
+        </li>
+        <!-- Tables -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">grid_on</span>Tables
+          </a>
+        </li>
+        <!-- Components -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">apps</span>
+              Components</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="components-buttons.html">Buttons</a></li>
+            <li><a href="components-grid.html">Grid System</a></li>
+            <li><a href="components-panel.html">Panels</a></li>
+            <li><a href="components-alert.html">Sweet Alert</a></li>
+            <li><a href="components-notification.html">Notifications</a></li>
+            <li><a href="components-icon.html">Icons</a></li>
+            <li><a href="components-typography.html">Typography</a></li>
+          </ul>
+        </li>
+        <!-- Maps -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">place</span>Maps
+          </a>
+        </li>
+        <!-- Widgets -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> widgets </span>Widgets
+          </a>
+        </li>
+        <!-- Charts -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> timeline </span>Charts
+          </a>
+        </li>
+        <!-- Forms -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">content_paste</span>
+              Forms</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="forms-regular.html">Regular Forms</a></li>
+            <li><a href="forms-extended.html">Extended Forms</a></li>
+          </ul>
+        </li>
+        <!-- Calender -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> date_range </span>Calender
+          </a>
+        </li>
+        <!-- Pages -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">image</span> Pages
+          </a>
+        </li>
+        <!-- Documentation -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> school </span>Documentation
+          </a>
+        </li>
+
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Account</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> account_circle </span
+            >Profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> settings </span>Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> logout </span>Logout
+          </a>
+        </li>
+      </ul>
+      <div class="user-account">
+        <div class="user-profile">
+          <img src="./images/profile-photo.jpg" alt="" alt="profile-img" />
+          <div class="user-detail" style="margin-left: 10px">
+            <h3>Vijeta Nehra</h3>
+            <span>Web Development</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- sidebar section ends -->
+
+    <!-- main content starts-->
+    <div class="main-content">
+      <!-- navbar -->
+      <div class="container-fluid navbar">
+        <div class="navbar-left">
+          <span
+            ><p style="color: grey; font-weight: 300">Regular Forms</p></span
+          >
+        </div>
+        <div class="navbar-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <span class="material-symbols-outlined">search</span>
+          </div>
+          <div class="notifications">
+            <span class="material-symbols-outlined" id="notification-icon"
+              >notifications</span
+            >
+            <span class="notification-badge">5</span>
+
+            <!--notifications -->
+            <div class="notification-popup" id="notification-popup">
+              <button class="close-btn" id="close-btn">&times;</button>
+              <div class="notification-item">
+                Mike John responded to your email
+              </div>
+              <div class="notification-item">You have 5 new tasks</div>
+              <div class="notification-item">You're now friend with Andrew</div>
+              <div class="notification-item">Another Notification</div>
+              <div class="notification-item">Another One</div>
+            </div>
+          </div>
+          <div class="user-icon">
+            <span
+              class="material-symbols-outlined"
+              style="color: black; cursor: pointer"
+              >account_circle</span
+            >
+          </div>
+        </div>
+        <!-- Mobile Navbar Toggle Button -->
+        <div class="mobile-navbar-toggle">
+          <span style="cursor: pointer" class="material-symbols-outlined"
+            >menu</span
+          >
+        </div>
+      </div>
+      <!-- navbar ends -->
+
+      <!--regular form section starts -->
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Stacked Form -->
+          <div class="col-md-6">
+            <div
+              class="card"
+              style="margin-top: 50px; width: 100%; max-width: 100%"
+            >
+              <div
+                class="card-header card-header-rose card-header-icon"
+                style="
+                  display: flex;
+                  background-color: white;
+                  border-bottom: none;
+                  padding: 0;
+                "
+              >
+                <div class="card-icon">
+                  <span class="material-symbols-outlined mail-icon">mail</span>
+                </div>
+                <h4
+                  class="card-title"
+                  style="font-size: 17px; font-weight: 100"
+                >
+                  Stacked Form
+                </h4>
+              </div>
+              <div class="card-body">
+                <form action="#" method="post">
+                  <!-- Email Address Input -->
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                  <!-- Password Input -->
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      class="form-control"
+                      placeholder="Password"
+                      required
+                    />
+                  </div>
+                  <!-- Subscribe Checkbox -->
+                  <div class="form-group" style="text-align: left">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="subscribe"
+                        name="subscribe"
+                        class="form-check-input"
+                      />
+                      <label for="subscribe" class="form-check-label"
+                        >Subscribe to newsletter</label
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: left;
+                  border-top: none;
+                  background-color: white;
+                  padding: 0;
+                "
+              >
+                <button type="submit" class="btn btn-rose">SUBMIT</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horizontal Form -->
+          <div class="col-md-6">
+            <div
+              class="card"
+              style="margin-top: 50px; width: 100%; max-width: 100%"
+            >
+              <div
+                class="card-header card-header-rose card-header-icon"
+                style="
+                  display: flex;
+                  background-color: white;
+                  border-bottom: none;
+                  padding: 0;
+                "
+              >
+                <div class="card-icon">
+                  <span class="material-symbols-outlined contacts-icon"
+                    >contacts</span
+                  >
+                </div>
+                <h4
+                  class="card-title"
+                  style="font-size: 17px; font-weight: 100"
+                >
+                  Horizontal Form
+                </h4>
+              </div>
+              <div class="card-body">
+                <form action="#" method="post">
+                  <!-- Email Address Input -->
+                  <div
+                    class="form-group"
+                    style="display: flex; margin-left: 30px"
+                  >
+                    <label for="email" style="margin-right: 10px">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <!-- Password Input -->
+                  <div class="form-group" style="display: flex">
+                    <label for="password" style="margin-right: 10px"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <!-- Subscribe Checkbox -->
+                  <div class="form-group" style="text-align: left">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        id="subscribe"
+                        name="subscribe"
+                        class="form-check-input"
+                      />
+                      <label for="subscribe" class="form-check-label"
+                        >Remember me</label
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="card-footer"
+                style="
+                  text-align: left;
+                  border-top: none;
+                  background-color: white;
+                  padding: 0;
+                "
+              >
+                <button type="submit" class="btn btn-rose">SIGN IN</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Elements -->
+          <div class="col-md-12">
+            <div
+              class="card"
+              style="min-width: 100% !important; margin-top: 50px"
+            >
+              <div
+                class="card-header card-header-rose card-header-text"
+                style="
+                  background-color: white;
+                  border-bottom: none;
+                  width: 100%;
+                "
+              >
+                <div class="card-text">
+                  <h4
+                    class="card-title form-title"
+                    style="
+                      font-size: 17px;
+                      font-weight: 100;
+                      text-align: left;
+                      margin-left: -25px;
+                    "
+                  >
+                    Form Elements
+                  </h4>
+                </div>
+              </div>
+              <div class="card-body" style="padding: 0px 70px">
+                <form>
+                  <!-- Label with Help -->
+                  <div
+                    class="form-group"
+                    style="
+                      display: flex;
+                      justify-content: space-evenly;
+                      margin-left: 45px;
+                    "
+                  >
+                    <label for="helpInput" style="margin-right: 10px"
+                      >With Help</label
+                    >
+                    <input type="text" class="form-control" id="helpInput" />
+                  </div>
+
+                  <!-- Password Input -->
+                  <div
+                    class="form-group"
+                    style="
+                      display: flex;
+                      justify-content: space-evenly;
+                      margin-left: 20px;
+                    "
+                  >
+                    <label for="passwordInput" style="margin-right: 20px"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="passwordInput"
+                      placeholder="Password"
+                      style="font-size: small"
+                    />
+                  </div>
+
+                  <!-- Placeholder -->
+                  <div
+                    class="form-group"
+                    style="
+                      display: flex;
+                      justify-content: space-evenly;
+                      margin-left: 6px;
+                    "
+                  >
+                    <label for="placeholderInput" style="margin-right: 20px"
+                      >Placeholder</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="placeholderInput"
+                      placeholder="Placeholder"
+                      style="font-size: small"
+                    />
+                  </div>
+
+                  <!-- Disabled Input -->
+                  <div
+                    class="form-group"
+                    style="
+                      display: flex;
+                      justify-content: space-evenly;
+                      margin-left: -10px;
+                    "
+                  >
+                    <label for="disabledInput" style="margin-right: 20px"
+                      >Disabled input here..</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="disabledInput"
+                      placeholder="Disabled input"
+                      disabled
+                      style="font-size: small"
+                    />
+                  </div>
+
+                  <!-- Static Control -->
+                  <div class="form-group" style="display: flex">
+                    <label for="staticControl" style="margin-right: 20px"
+                      >Static Control</label
+                    >
+                    <p
+                      class="form-control-static"
+                      id="staticControl"
+                      style="font-size: small"
+                    >
+                      hello@creative-tim.com
+                    </p>
+                  </div>
+
+                  <!-- Checkboxes -->
+                  <div
+                    class="form-group"
+                    style="display: flex; margin-left: 10px"
+                  >
+                    <label style="margin-right: 20px">Checkboxes</label><br />
+                    <div style="display: flex; flex-direction: column">
+                      <div class="form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="checkbox1"
+                        />
+                        <label class="form-check-label" for="checkbox1"
+                          >Checkbox 1</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="checkbox2"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="checkbox2"
+                          style="margin-left: 2px"
+                          >Checkbox 2</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Radios -->
+                  <div
+                    class="form-group"
+                    style="display: flex; margin-left: 45px"
+                  >
+                    <label style="margin-right: 20px">Radios</label><br />
+                    <div style="display: flex; flex-direction: column">
+                      <div class="form-check">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="radioGroup"
+                          id="radio1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="radio1"
+                          >Radio 1</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="radioGroup"
+                          id="radio2"
+                          value="option2"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="radio2"
+                          style="margin-left: 2px"
+                          >Radio 2</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Inline Checkboxes -->
+                  <!-- <div
+                    class="form-group"
+                    style="display: flex; margin-left: -30px"
+                  >
+                    <label style="margin-right: 20px">Inline Checkboxes</label
+                    ><br />
+                    <div class="form-check form-check-inline">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox1"
+                        >Inline Checkbox 1</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="inlineCheckbox2"
+                        value="option2"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox2"
+                        >Inline Checkbox 2</label
+                      >
+                    </div>
+                  </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Variants -->
+          <div class="col-md-12">
+            <div
+              class="card"
+              style="min-width: 100% !important; margin-top: 50px"
+            >
+              <div
+                class="card-header card-header-rose card-header-text"
+                style="
+                  max-width: 100%;
+                  background-color: white;
+                  border-bottom: none;
+                "
+              >
+                <div class="card-text">
+                  <h4
+                    class="card-title input-title"
+                    style="
+                      font-size: 17px;
+                      font-weight: 100;
+                      margin-left: -25px;
+                    "
+                  >
+                    Input Variants
+                  </h4>
+                </div>
+              </div>
+              <div class="card-body">
+                <div
+                  class="form-group"
+                  style="display: flex; margin-left: 10px"
+                >
+                  <label style="margin-right: 20px"
+                    >Custom Checkboxes & radios</label
+                  ><br />
+                  <div class="checkboxesRadios">
+                    <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      text-align: left;
+                      margin-right: 20px;
+                    "
+                  >
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="checkbox1"
+                        checked
+                      />
+                      <label class="form-check-label" for="checkbox1"
+                        >Checked</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="checkbox2"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="checkbox2"
+                        style="margin-left: 2px"
+                        >Unchecked</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="checkbox3"
+                        disabled
+                        checked
+                      />
+                      <label class="form-check-label" for="checkbox3"
+                        >Disabled Checked</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="checkbox4"
+                        disabled
+                      />
+                      <label class="form-check-label" for="checkbox4"
+                        >Disabled Unchecked</label
+                      >
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      text-align: left;
+                    "
+                  >
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="radioGroup"
+                        id="radio1"
+                        value="option1"
+                        checked
+                      />
+                      <label class="form-check-label" for="radio1"
+                        >Radio is on</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="radioGroup"
+                        id="radio2"
+                        value="option2"
+                      />
+                      <label class="form-check-label" for="radio2"
+                        >Radio is off</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" name="radioGroup" id="radio3" value="option3" disabled />
+                      <label class="form-check-label" for="radio3">Disabled Radio is on</label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="radioGroup"
+                        id="radio4"
+                        value="option4"
+                        disabled
+                      />
+                      <label class="form-check-label" for="radio4"
+                        >Disabled Radio is off</label
+                      >
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <!-- success input -->
+                <div
+                  class="form-group"
+                  style="
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-left: 30px;
+                  "
+                >
+                  <label for="helpInputSuccess" style="margin-right: 10px"
+                    >Input with success</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control success"
+                    id="helpInputSuccess"
+                    placeholder="Success"
+                  />
+                </div>
+                <!-- error input -->
+                <div
+                  class="form-group"
+                  style="
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-left: 45px;
+                  "
+                >
+                  <label for="helpInputError" style="margin-right: 10px"
+                    >Input with error</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control error"
+                    id="helpInputError"
+                    placeholder="Error input"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--regular form section ends -->
+
+      <!-- footer section starts-->
+      <footer class="footer">
+        <p>© 2024, made by Creative Tim for a better web.</p>
+      </footer>
+      <!-- footer section ends-->
+    </div>
+    <!-- main content ends-->
+    <script src="./script.js"></script>
+  </body>
+</html>

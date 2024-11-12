@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/layout-dashboard.svg"
+      type="image/x-icon"
+    />
+    <!--google font link-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <title>components</title>
+  </head>
+  <body>
+    <!-- sidebar section starts -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="https://demos.creative-tim.com/material-dashboard-pro-angular2/assets/img/angular2-logo-white.png"
+          alt="logo"
+        />
+        <h2>Creative Tim</h2>
+      </div>
+      <ul class="sidebar-links" style="padding-left: 0">
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Main Menu</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <!-- Dashboard -->
+        <li>
+          <a href="index.html">
+            <span class="material-symbols-outlined"> dashboard </span>Dashboard
+          </a>
+        </li>
+        <!-- Tables -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">grid_on</span>Tables
+          </a>
+        </li>
+        <!-- Components -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">apps</span>
+              Components</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="components-buttons.html">Buttons</a></li>
+            <li><a href="components-grid.html">Grid System</a></li>
+            <li><a href="components-panel.html">Panels</a></li>
+            <li><a href="components-alert.html">Sweet Alert</a></li>
+            <li><a href="components-notification.html">Notifications</a></li>
+            <li><a href="components-icon.html">Icons</a></li>
+            <li><a href="components-typography.html">Typography</a></li>
+          </ul>
+        </li>
+        <!-- Maps -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">place</span>Maps
+          </a>
+        </li>
+        <!-- Widgets -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> widgets </span>Widgets
+          </a>
+        </li>
+        <!-- Charts -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> timeline </span>Charts
+          </a>
+        </li>
+        <!-- Forms -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">content_paste</span>
+              Forms</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="forms-regular.html">Regular Forms</a></li>
+            <li><a href="forms-extended.html">Extended Forms</a></li>
+          </ul>
+        </li>
+        <!-- Calender -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> date_range </span>Calender
+          </a>
+        </li>
+        <!-- Pages -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">image</span> Pages
+          </a>
+        </li>
+        <!-- Documentation -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> school </span>Documentation
+          </a>
+        </li>
+
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Account</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> account_circle </span
+            >Profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> settings </span>Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> logout </span>Logout
+          </a>
+        </li>
+      </ul>
+      <div class="user-account">
+        <div class="user-profile">
+          <img src="./images/profile-photo.jpg" alt="" alt="profile-img" />
+          <div class="user-detail" style="margin-left: 10px">
+            <h3>Vijeta Nehra</h3>
+            <span>Web Development</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- sidebar section ends -->
+
+    <!-- main content starts-->
+    <div class="main-content">
+      <!-- navbar -->
+      <div class="container-fluid navbar">
+        <div class="navbar-left">
+          <span
+            ><p style="color: grey; font-weight: 300">Notifications</p></span
+          >
+        </div>
+        <div class="navbar-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <span class="material-symbols-outlined">search</span>
+          </div>
+          <div class="notifications">
+            <span class="material-symbols-outlined" id="notification-icon"
+              >notifications</span
+            >
+            <span class="notification-badge">5</span>
+
+            <!--notifications -->
+            <div class="notification-popup" id="notification-popup">
+              <button class="close-btn" id="close-btn">&times;</button>
+              <div class="notification-item">
+                Mike John responded to your email
+              </div>
+              <div class="notification-item">You have 5 new tasks</div>
+              <div class="notification-item">You're now friend with Andrew</div>
+              <div class="notification-item">Another Notification</div>
+              <div class="notification-item">Another One</div>
+            </div>
+          </div>
+          <div class="user-icon">
+            <span class="material-symbols-outlined" style="color: black; cursor: pointer;">account_circle</span>
+          </div>
+        </div>
+        <!-- Mobile Navbar Toggle Button -->
+        <div class="mobile-navbar-toggle">
+          <span style="cursor: pointer" class="material-symbols-outlined"
+            >menu</span
+          >
+        </div>
+      </div>
+      <!-- navbar ends -->
+
+      <!-- notification section starts-->
+      <div class="container-fluid" style="font-weight: 100; margin-top: 46px;">
+        <div class="row">
+          <div class="header text-center ml-auto mr-auto">
+            <h3 class="title">Notifications</h3>
+            <p class="category">
+              Handcrafted by our friend
+              <a target="_blank" href="https://github.com/mouse0270"
+                >Robert McIntosh</a
+              >. Please checkout the
+              <a
+                href="http://bootstrap-notify.remabledesigns.com/"
+                target="_blank"
+                >full documentation.</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card" style="margin-top: 50px">
+              <div class="card-header">
+                <h4 class="card-title">Notifications Style</h4>
+              </div>
+              <div class="card-body">
+                <div class="alert alert-info">
+                  <span>This is a plain notification</span>
+                </div>
+                <div class="alert alert-info">
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="zg0xia"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span>This is a notification with close button.</span>
+                </div>
+                <div
+                  data-notify="container"
+                  class="alert alert-info alert-with-icon"
+                >
+                  <span
+                    class="material-symbols-outlined notification-icon notification-icon-info"
+                  >
+                    notifications
+                  </span>
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="1iq9q"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span
+                    data-notify="icon"
+                    class="now-ui-icons ui-1_bell-53"
+                  ></span
+                  ><span data-notify="message"
+                    >This is a notification with close button and icon and have
+                    many lines. You can see that the icon and the close button
+                    are always vertically aligned. This is a beautiful
+                    notification. So you don't have to worry about the
+                    style.</span
+                  >
+                </div>
+                <div
+                  data-notify="container"
+                  class="alert alert-rose alert-with-icon"
+                >
+                  <span
+                    class="material-symbols-outlined notification-icon notification-icon-rose"
+                  >
+                    notifications
+                  </span>
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="ohlcn5"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span data-notify="message"
+                    >This is a notification with close button and icon and is
+                    made with ".alert-rose". You can see that the icon and the
+                    close button are always vertically aligned. This is a
+                    beautiful notification. So you don't have to worry about the
+                    style.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card" style="margin-top: 50px">
+              <div class="card-header">
+                <h4 class="card-title">Notification states</h4>
+              </div>
+              <div class="card-body">
+                <div class="alert alert-info">
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="5xi6bg"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span
+                    ><b> Info - </b> This is a regular notification made with
+                    ".alert-info"</span
+                  >
+                </div>
+                <div class="alert alert-success">
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="ezihrn"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span
+                    ><b> Success - </b> This is a regular notification made with
+                    ".alert-success"</span
+                  >
+                </div>
+                <div class="alert alert-warning">
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="3rlkpy"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span
+                    ><b> Warning - </b> This is a regular notification made with
+                    ".alert-warning"</span
+                  >
+                </div>
+                <div class="alert alert-danger">
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="pt6zud"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span
+                    ><b> Danger - </b> This is a regular notification made with
+                    ".alert-danger"</span
+                  >
+                </div>
+                <div class="alert alert-primary">
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="pllmba"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span
+                    ><b> Primary - </b> This is a regular notification made with
+                    ".alert-primary"</span
+                  >
+                </div>
+                <div class="alert alert-rose">
+                  <button
+                    mat-button=""
+                    type="button"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    class="close mat-button mat-button-base"
+                    fdprocessedid="y3x0m"
+                  >
+                    <span class="material-symbols-outlined close"> close </span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div></button
+                  ><span
+                    ><b> Rose - </b> This is a regular notification made with
+                    ".alert-rose"</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card" style="margin-top: 50px">
+              <div class="card-body">
+                <div class="places-buttons">
+                  <div class="row">
+                    <div class="col-md-6 ml-auto mr-auto text-center">
+                      <h4 class="card-title" style="text-align: center">
+                        Notifications Places
+                        <p class="category" style="font-size: small">
+                          Click to view notifications
+                        </p>
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <button
+                            mat-raised-button=""
+                            class="btn btn-primary btn-block mat-raised-button mat-button-base notification-places"
+                            fdprocessedid="t2q2do"
+                          >
+                            <span class="mat-button-wrapper">Top Left</span>
+                            <div
+                              matripple=""
+                              class="mat-ripple mat-button-ripple"
+                            ></div>
+                            <div class="mat-button-focus-overlay"></div>
+                          </button>
+                        </div>
+                        <div class="col-md-4">
+                          <button
+                            mat-raised-button=""
+                            class="btn btn-primary btn-block mat-raised-button mat-button-base notification-places"
+                            fdprocessedid="z8wkpj"
+                          >
+                            <span class="mat-button-wrapper">Top Center</span>
+                            <div
+                              matripple=""
+                              class="mat-ripple mat-button-ripple"
+                            ></div>
+                            <div class="mat-button-focus-overlay"></div>
+                          </button>
+                        </div>
+                        <div class="col-md-4">
+                          <button
+                            mat-raised-button=""
+                            class="btn btn-primary btn-block mat-raised-button mat-button-base notification-places"
+                            fdprocessedid="icw0a"
+                          >
+                            <span class="mat-button-wrapper">Top Right</span>
+                            <div
+                              matripple=""
+                              class="mat-ripple mat-button-ripple"
+                            ></div>
+                            <div class="mat-button-focus-overlay"></div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <button
+                            mat-raised-button=""
+                            class="btn btn-primary btn-block mat-raised-button mat-button-base notification-places"
+                            fdprocessedid="itp3w"
+                          >
+                            <span class="mat-button-wrapper">Bottom Left</span>
+                            <div
+                              matripple=""
+                              class="mat-ripple mat-button-ripple"
+                            ></div>
+                            <div class="mat-button-focus-overlay"></div>
+                          </button>
+                        </div>
+                        <div class="col-md-4">
+                          <button
+                            mat-raised-button=""
+                            class="btn btn-primary btn-block mat-raised-button mat-button-base notification-places"
+                            fdprocessedid="um21d"
+                          >
+                            <span class="mat-button-wrapper"
+                              >Bottom Center</span
+                            >
+                            <div
+                              matripple=""
+                              class="mat-ripple mat-button-ripple"
+                            ></div>
+                            <div class="mat-button-focus-overlay"></div>
+                          </button>
+                        </div>
+                        <div class="col-md-4">
+                          <button
+                            mat-raised-button=""
+                            class="btn btn-primary btn-block mat-raised-button mat-button-base notification-places"
+                            fdprocessedid="pfh5fs"
+                          >
+                            <span class="mat-button-wrapper">Bottom Right</span>
+                            <div
+                              matripple=""
+                              class="mat-ripple mat-button-ripple"
+                            ></div>
+                            <div class="mat-button-focus-overlay"></div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <div class="card-header">
+                      <h4 class="card-title" style="text-align: center">
+                        Modal
+                      </h4>
+                    </div>
+                    <button
+                      mat-raised-button=""
+                      data-toggle="modal"
+                      data-target="#myModal"
+                      class="btn btn-primary btn-raised btn-round mat-raised-button mat-button-base classic-model"
+                      fdprocessedid="qgrrsi"
+                      style="border-radius: 50px; padding: 10px 25px"
+                    >
+                      <span class="mat-button-wrapper"> Classic modal </span>
+                      <div
+                        matripple=""
+                        class="mat-ripple mat-button-ripple"
+                      ></div>
+                      <div class="mat-button-focus-overlay"></div></button
+                    ><button
+                      mat-raised-button=""
+                      data-toggle="modal"
+                      data-target="#noticeModal"
+                      class="btn btn-raised btn-round btn-info mat-raised-button mat-button-base"
+                      fdprocessedid="9ii3cv"
+                      style="
+                        border-radius: 50px;
+                        padding: 10px 25px;
+                        margin: 5px;
+                      "
+                    >
+                      <span class="mat-button-wrapper"> Notice modal </span>
+                      <div
+                        matripple=""
+                        class="mat-ripple mat-button-ripple"
+                      ></div>
+                      <div class="mat-button-focus-overlay"></div></button
+                    ><button
+                      mat-raised-button=""
+                      data-toggle="modal"
+                      data-target="#myModal10"
+                      class="btn btn-raised btn-round btn-rose mat-raised-button mat-button-base"
+                      fdprocessedid="c4udwa"
+                      style="
+                        border-radius: 50px;
+                        padding: 10px 25px;
+                        margin: 5px;
+                      "
+                    >
+                      <span class="mat-button-wrapper">
+                        Small alert modal
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- notification section ends-->
+
+      <!-- footer section starts-->
+      <footer class="footer">
+        <p>© 2024, made by Creative Tim for a better web.</p>
+      </footer>
+      <!-- footer section ends-->
+    </div>
+    <!-- main content ends-->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

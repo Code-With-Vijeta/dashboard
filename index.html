@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/layout-dashboard.svg"
+      type="image/x-icon"
+    />
+    <!-- graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--google font link-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./dashboard.css" />
+    <title>dashboard</title>
+  </head>
+
+  <body>
+    <!-- sidebar section starts -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="https://demos.creative-tim.com/material-dashboard-pro-angular2/assets/img/angular2-logo-white.png"
+          alt="logo"
+        />
+        <h2>Creative Tim</h2>
+      </div>
+      <ul class="sidebar-links" style="padding-left: 0">
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Main Menu</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <!-- Dashboard -->
+        <li>
+          <a href="index.html">
+            <span class="material-symbols-outlined"> dashboard </span>Dashboard
+          </a>
+        </li>
+        <!-- Tables -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">grid_on</span>Tables
+          </a>
+        </li>
+        <!-- Components -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">apps</span>
+              Components</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="components-buttons.html">Buttons</a></li>
+            <li><a href="components-grid.html">Grid System</a></li>
+            <li><a href="components-panel.html">Panels</a></li>
+            <li><a href="components-alert.html">Sweet Alert</a></li>
+            <li><a href="components-notification.html">Notifications</a></li>
+            <li><a href="components-icon.html">Icons</a></li>
+            <li><a href="components-typography.html">Typography</a></li>
+          </ul>
+        </li>
+        <!-- Maps -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">place</span>Maps
+          </a>
+        </li>
+        <!-- Widgets -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> widgets </span>Widgets
+          </a>
+        </li>
+        <!-- Charts -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> timeline </span>Charts
+          </a>
+        </li>
+        <!-- Forms -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">content_paste</span>
+              Forms</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="forms-regular.html">Regular Forms</a></li>
+            <li><a href="forms-extended.html">Extended Forms</a></li>
+          </ul>
+        </li>
+        <!-- Calender -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> date_range </span>Calender
+          </a>
+        </li>
+        <!-- Pages -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">image</span> Pages
+          </a>
+        </li>
+        <!-- Documentation -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> school </span>Documentation
+          </a>
+        </li>
+
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Account</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> account_circle </span
+            >Profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> settings </span>Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> logout </span>Logout
+          </a>
+        </li>
+      </ul>
+      <div class="user-account">
+        <div class="user-profile">
+          <img src="./images/profile-photo.jpg" alt="" alt="profile-img" />
+          <div class="user-detail" style="margin-left: 10px">
+            <h3>Vijeta Nehra</h3>
+            <span>Web Development</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- sidebar section ends -->
+
+    <!-- main content starts-->
+    <div class="main-content">
+      <!-- navbar -->
+      <div class="container navbar">
+        <div class="navbar-left">
+          <span
+            class="material-symbols-outlined"
+            style="color: grey; font-weight: 300"
+            >dashboard</span
+          >
+          <span><p style="color: grey; font-weight: 500">Dashboard</p></span>
+        </div>
+        <div class="navbar-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <span class="material-symbols-outlined">search</span>
+          </div>
+          <div class="notifications">
+            <span class="material-symbols-outlined" id="notification-icon"
+              >notifications</span
+            >
+            <span class="notification-badge">5</span>
+
+            <!--notifications -->
+            <div class="notification-popup" id="notification-popup">
+              <button class="close-btn" id="close-btn">&times;</button>
+              <div class="notification-item">
+                Mike John responded to your email
+              </div>
+              <div class="notification-item">You have 5 new tasks</div>
+              <div class="notification-item">You're now friend with Andrew</div>
+              <div class="notification-item">Another Notification</div>
+              <div class="notification-item">Another One</div>
+            </div>
+          </div>
+          <div class="user-icon">
+            <span
+              class="material-symbols-outlined"
+              style="color: black; cursor: pointer"
+              >account_circle</span
+            >
+          </div>
+        </div>
+        <!-- Mobile Navbar Toggle Button -->
+        <div class="mobile-navbar-toggle">
+          <span style="cursor: pointer" class="material-symbols-outlined"
+            >menu</span
+          >
+        </div>
+      </div>
+      <!-- navbar ends -->
+
+      <!-- Main dashboard content starts -->
+      <div class="dashboard-content">
+        <div style="display: flex; align-items: center">
+          <i class="bx bx-globe"></i>
+          <h3 style="font-weight: 300; margin-left: 10px; margin-bottom: 50px">
+            Global Sales by Top Locations
+          </h3>
+        </div>
+
+        <div class="content-sections">
+          <!-- Table Section -->
+          <div class="table-section">
+            <table style="line-height: 1.5">
+              <tbody>
+                <tr>
+                  <td class="flag"><img src="./images/us.svg" alt="USA" /></td>
+                  <td>USA</td>
+                  <td style="text-align: right">2,920</td>
+                  <td style="text-align: right">53.23%</td>
+                </tr>
+                <tr>
+                  <td class="flag">
+                    <img src="./images/de.svg" alt="Germany" />
+                  </td>
+                  <td>Germany</td>
+                  <td style="text-align: right">1,300</td>
+                  <td style="text-align: right">20.43%</td>
+                </tr>
+                <tr>
+                  <td class="flag">
+                    <img src="./images/au.svg" alt="Australia" />
+                  </td>
+                  <td>Australia</td>
+                  <td style="text-align: right">760</td>
+                  <td style="text-align: right">10.35%</td>
+                </tr>
+                <tr>
+                  <td class="flag"><img src="./images/gb.svg" alt="UK" /></td>
+                  <td>United Kingdom</td>
+                  <td style="text-align: right">690</td>
+                  <td style="text-align: right">7.87%</td>
+                </tr>
+                <tr>
+                  <td class="flag">
+                    <img src="./images/ro.svg" alt="Romania" />
+                  </td>
+                  <td>Romania</td>
+                  <td style="text-align: right">600</td>
+                  <td style="text-align: right">5.94%</td>
+                </tr>
+                <tr style="border-bottom: none">
+                  <td class="flag">
+                    <img src="./images/br.svg" alt="Brazil" />
+                  </td>
+                  <td>Brazil</td>
+                  <td style="text-align: right">550</td>
+                  <td style="text-align: right">4.34%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Map Section -->
+          <div class="map-section">
+            <div id="map" style="height: 90%">
+              <iframe
+                class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.795506882336!2d72.84072450000001!3d19.141650499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1721630089312!5m2!1sen!2sin"
+                allowfullscreen
+                loading="lazy"
+                style="border: 0; width: 100%; height: 100%"
+                aria-label="Map showing Jogeshwari West, Mumbai, Maharashtra"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main dashboard content ends -->
+
+      <!-- cards sections starts -->
+      <div class="cards-section">
+        <!-- card1 -->
+        <div class="card" style="margin-top: 50px">
+          <canvas
+            id="barChart1"
+            class="graph"
+            width="400"
+            height="200"
+          ></canvas>
+          <div
+            style="
+              margin-top: -82px;
+              display: flex;
+              justify-content: center;
+              gap: 15px;
+            "
+          >
+            <i
+              class="bx bx-rotate-left"
+              style="font-size: 18px; color: rgb(77, 192, 237)"
+            ></i>
+            <i class="bx bxs-edit-alt" style="font-size: 18px"></i>
+          </div>
+          <p style="color: black; text-align: left; margin-top: 20px">
+            Website Views
+          </p>
+          <p style="font-size: 0.8rem; text-align: left; margin-top: 5px">
+            Last Campaign Performance
+          </p>
+          <hr style="margin-top: 20px" />
+          <div class="timer">
+            <i class="bx bx-time-five"></i>
+            <p style="font-size: 0.7rem">campaign sent 2 days ago</p>
+          </div>
+        </div>
+        <!-- card2 -->
+        <div class="card" style="margin-top: 50px">
+          <canvas
+            id="lineChart1"
+            class="graph"
+            width="400"
+            height="200"
+          ></canvas>
+          <div
+            style="
+              margin-top: -82px;
+              display: flex;
+              justify-content: center;
+              gap: 15px;
+            "
+          >
+            <i
+              class="bx bx-rotate-left"
+              style="font-size: 18px; color: rgb(77, 192, 237)"
+            ></i>
+            <i class="bx bxs-edit-alt" style="font-size: 18px"></i>
+          </div>
+          <p style="color: black; text-align: left; margin-top: 20px">
+            Daily Sales
+          </p>
+          <p style="font-size: 0.8rem; text-align: left; margin-top: 5px">
+            55% increase in today sales.
+          </p>
+          <hr style="margin-top: 20px" />
+          <div class="timer">
+            <i class="bx bx-time-five"></i>
+            <p style="font-size: 0.7rem">updated 4 minutes ago</p>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="card" style="margin-top: 50px">
+          <canvas
+            id="barChart2"
+            class="graph"
+            width="400"
+            height="200"
+          ></canvas>
+          <div
+            style="
+              margin-top: -82px;
+              display: flex;
+              justify-content: center;
+              gap: 15px;
+            "
+          >
+            <i
+              class="bx bx-rotate-left"
+              style="font-size: 18px; color: rgb(77, 192, 237)"
+            ></i>
+            <i class="bx bxs-edit-alt" style="font-size: 18px"></i>
+          </div>
+          <p style="color: black; text-align: left; margin-top: 20px">
+            Completed Tasks
+          </p>
+          <p style="font-size: 0.8rem; text-align: left; margin-top: 5px">
+            Last Campaign Performance
+          </p>
+          <hr style="margin-top: 20px" />
+          <div class="timer">
+            <i class="bx bx-time-five"></i>
+            <p style="font-size: 0.7rem">campaign sent 2 days ago</p>
+          </div>
+        </div>
+      </div>
+      <!-- Cards section ends-->
+
+      <!--  small cards section starts -->
+      <div class="grid-container" style="max-width: 100%">
+        <!-- card1 -->
+        <div class="small-cards">
+          <div style="display: flex; justify-content: space-between">
+            <span class="material-symbols-outlined weekend"> weekend </span>
+            <div>
+              <p style="font-size: 12px">Bookings</p>
+              <h3 style="font-weight: lighter">184</h3>
+            </div>
+          </div>
+          <hr style="margin: 10px 0" />
+          <div style="display: flex; gap: 5px">
+            <span
+              class="material-symbols-outlined"
+              style="font-size: 15px; color: red"
+            >
+              warning
+            </span>
+            <p style="font-size: 0.7rem">Get More Space...</p>
+          </div>
+        </div>
+        <!-- card2 -->
+        <div class="small-cards">
+          <div style="display: flex; justify-content: space-between">
+            <span class="material-symbols-outlined equalizer"> equalizer </span>
+            <div>
+              <p style="font-size: 12px">Website Visits</p>
+              <h3 style="font-weight: lighter">75.521</h3>
+            </div>
+          </div>
+          <hr style="margin: 10px 0" />
+          <div style="display: flex; gap: 5px">
+            <i class="bx bx-search-alt-2"></i>
+            <p style="font-size: 0.7rem">Tracked from Google Analytics</p>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="small-cards">
+          <div style="display: flex; justify-content: space-between">
+            <span class="material-symbols-outlined store">store</span>
+            <div>
+              <p style="font-size: 12px">Revenue</p>
+              <h3 style="font-weight: lighter">$34,245</h3>
+            </div>
+          </div>
+          <hr style="margin: 10px 0" />
+          <div style="display: flex; gap: 5px">
+            <i class="bx bx-calendar"></i>
+            <p style="font-size: 0.7rem">Last 24 Hours</p>
+          </div>
+        </div>
+        <!-- card4 -->
+        <div class="small-cards">
+          <div style="display: flex; justify-content: space-between">
+            <i class="bx bxl-twitter twitter"></i>
+            <div>
+              <p style="font-size: 12px">Followers</p>
+              <h3 style="font-weight: lighter">+245</h3>
+            </div>
+          </div>
+          <hr style="margin: 10px 0" />
+          <div style="display: flex; gap: 5px">
+            <i class="bx bx-refresh"></i>
+            <p style="font-size: 0.7rem">Just Updated</p>
+          </div>
+        </div>
+      </div>
+      <!--  small cards section ends -->
+
+      <!-- listings section starts-->
+      <p
+        style="
+          font-size: 25px;
+          color: rgb(88, 88, 88);
+          margin-left: 3%;
+          margin-top: 50px;
+        "
+      >
+        Manage Listings
+      </p>
+      <div class="cards-section">
+        <!-- card1 -->
+        <div class="card" style="margin-top: 50px">
+          <img class="rooms" src="./images/room1.jfif" alt="room1" />
+          <div
+            style="
+              margin-top: -82px;
+              display: flex;
+              justify-content: center;
+              gap: 15px;
+            "
+          >
+            <span class="material-symbols-outlined" style="font-size: 20px">
+              gallery_thumbnail
+            </span>
+            <span
+              class="material-symbols-outlined"
+              style="color: rgb(10, 175, 10); font-size: 20px"
+            >
+              edit
+            </span>
+            <span
+              class="material-symbols-outlined"
+              style="color: red; font-size: 20px"
+            >
+              close
+            </span>
+          </div>
+          <p
+            style="color: rgb(74, 74, 74); text-align: center; margin-top: 20px"
+          >
+            Cozy 5 Stars Apartment
+          </p>
+          <p style="font-size: 0.7rem; text-align: center; margin-top: 5px">
+            The place is close to Barceloneta Beach and bus stop just 2 min by
+            walk and near to "Naviglio" where you can enjoy the main night life
+            in Barcelona.
+          </p>
+          <hr style="margin-top: 20px; background-color: rgb(188, 186, 186)" />
+          <div class="Locations">
+            <p style="font-size: small; color: rgb(74, 74, 74)">$899/night</p>
+            <div style="display: flex">
+              <span class="material-symbols-outlined" style="font-size: 17px">
+                location_on
+              </span>
+              <p style="font-size: smaller">Barcelona, Spain</p>
+            </div>
+          </div>
+        </div>
+        <!-- card2 -->
+        <div class="card" style="margin-top: 50px">
+          <img class="rooms" src="./images/room2.jfif" alt="room2" />
+          <div
+            style="
+              margin-top: -82px;
+              display: flex;
+              justify-content: center;
+              gap: 15px;
+            "
+          >
+            <span class="material-symbols-outlined" style="font-size: 20px">
+              gallery_thumbnail
+            </span>
+            <span
+              class="material-symbols-outlined"
+              style="color: rgb(10, 175, 10); font-size: 20px"
+            >
+              edit
+            </span>
+            <span
+              class="material-symbols-outlined"
+              style="color: red; font-size: 20px"
+            >
+              close
+            </span>
+          </div>
+          <p
+            style="color: rgb(74, 74, 74); text-align: center; margin-top: 20px"
+          >
+            Office Studio
+          </p>
+          <p style="font-size: 0.7rem; text-align: center; margin-top: 5px">
+            The place is close to Metro Station and bus stop just 2 min by walk
+            and near to "Naviglio" where you can enjoy the night life in London,
+            UK.
+          </p>
+          <hr style="margin-top: 20px; background-color: rgb(188, 186, 186)" />
+          <div class="Locations">
+            <p style="font-size: small; color: rgb(74, 74, 74)">$1.119/night</p>
+            <div style="display: flex">
+              <span class="material-symbols-outlined" style="font-size: 17px">
+                location_on
+              </span>
+              <p style="font-size: smaller">London, UK</p>
+            </div>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="card" style="margin-top: 50px">
+          <img class="rooms" src="./images/room3.jfif" alt="room3" />
+          <div
+            style="
+              margin-top: -82px;
+              display: flex;
+              justify-content: center;
+              gap: 15px;
+            "
+          >
+            <span class="material-symbols-outlined" style="font-size: 20px">
+              gallery_thumbnail
+            </span>
+            <span
+              class="material-symbols-outlined"
+              style="color: rgb(10, 175, 10); font-size: 20px"
+            >
+              edit
+            </span>
+            <span
+              class="material-symbols-outlined"
+              style="color: red; font-size: 20px"
+            >
+              close
+            </span>
+          </div>
+          <p
+            style="color: rgb(74, 74, 74); text-align: center; margin-top: 20px"
+          >
+            Beautiful Castle
+          </p>
+          <p style="font-size: 0.7rem; text-align: center; margin-top: 5px">
+            The place is close to Metro Station and bus stop just 2 min by walk
+            and near to "Naviglio" where you can enjoy the main night life in
+            Milan.
+          </p>
+          <hr style="margin-top: 20px; background-color: rgb(188, 186, 186)" />
+          <div class="Locations">
+            <p style="font-size: small; color: rgb(74, 74, 74)">$459/night</p>
+            <div style="display: flex">
+              <span class="material-symbols-outlined" style="font-size: 17px">
+                location_on
+              </span>
+              <p style="font-size: smaller">Milan, Italy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- listings section ends-->
+
+      <!-- footer section starts-->
+      <footer class="footer">
+        <p>© 2024, made by Creative Tim for a better web.</p>
+      </footer>
+      <!-- footer section ends-->
+    </div>
+    <!-- main content ends-->
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/layout-dashboard.svg"
+      type="image/x-icon"
+    />
+    <!--google font link-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <title>components</title>
+  </head>
+  <body>
+    <!-- sidebar section starts -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="https://demos.creative-tim.com/material-dashboard-pro-angular2/assets/img/angular2-logo-white.png"
+          alt="logo"
+        />
+        <h2>Creative Tim</h2>
+      </div>
+      <ul class="sidebar-links" style="padding-left: 0">
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Main Menu</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <!-- Dashboard -->
+        <li>
+          <a href="index.html">
+            <span class="material-symbols-outlined"> dashboard </span>Dashboard
+          </a>
+        </li>
+        <!-- Tables -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">grid_on</span>Tables
+          </a>
+        </li>
+        <!-- Components -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">apps</span>
+              Components</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="components-buttons.html">Buttons</a></li>
+            <li><a href="components-grid.html">Grid System</a></li>
+            <li><a href="components-panel.html">Panels</a></li>
+            <li><a href="components-alert.html">Sweet Alert</a></li>
+            <li><a href="components-notification.html">Notifications</a></li>
+            <li><a href="components-icon.html">Icons</a></li>
+            <li><a href="components-typography.html">Typography</a></li>
+          </ul>
+        </li>
+        <!-- Maps -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">place</span>Maps
+          </a>
+        </li>
+        <!-- Widgets -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> widgets </span>Widgets
+          </a>
+        </li>
+        <!-- Charts -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> timeline </span>Charts
+          </a>
+        </li>
+        <!-- Forms -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">content_paste</span>
+              Forms</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="forms-regular.html">Regular Forms</a></li>
+            <li><a href="forms-extended.html">Extended Forms</a></li>
+          </ul>
+        </li>
+        <!-- Calender -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> date_range </span>Calender
+          </a>
+        </li>
+        <!-- Pages -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">image</span> Pages
+          </a>
+        </li>
+        <!-- Documentation -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> school </span>Documentation
+          </a>
+        </li>
+
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Account</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> account_circle </span
+            >Profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> settings </span>Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> logout </span>Logout
+          </a>
+        </li>
+      </ul>
+      <div class="user-account">
+        <div class="user-profile">
+          <img src="./images/profile-photo.jpg" alt="" alt="profile-img" />
+          <div class="user-detail" style="margin-left: 10px">
+            <h3>Vijeta Nehra</h3>
+            <span>Web Development</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- sidebar section ends -->
+
+    <!-- main content starts-->
+    <div class="main-content">
+      <!-- navbar -->
+      <div class="container-fluid navbar">
+        <div class="navbar-left">
+          <span><p style="color: grey; font-weight: 300">Sweet Alert</p></span>
+        </div>
+        <div class="navbar-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <span class="material-symbols-outlined">search</span>
+          </div>
+          <div class="notifications">
+            <span class="material-symbols-outlined" id="notification-icon"
+              >notifications</span
+            >
+            <span class="notification-badge">5</span>
+
+            <!--notifications -->
+            <div class="notification-popup" id="notification-popup">
+              <button class="close-btn" id="close-btn">&times;</button>
+              <div class="notification-item">
+                Mike John responded to your email
+              </div>
+              <div class="notification-item">You have 5 new tasks</div>
+              <div class="notification-item">You're now friend with Andrew</div>
+              <div class="notification-item">Another Notification</div>
+              <div class="notification-item">Another One</div>
+            </div>
+          </div>
+          <div class="user-icon">
+            <span
+              class="material-symbols-outlined"
+              style="color: black; cursor: pointer"
+              >account_circle</span
+            >
+          </div>
+        </div>
+        <!-- Mobile Navbar Toggle Button -->
+        <div class="mobile-navbar-toggle">
+          <span style="cursor: pointer" class="material-symbols-outlined"
+            >menu</span
+          >
+        </div>
+      </div>
+      <!-- navbar ends -->
+
+      <!-- alert section starts-->
+      <div class="container-fluid" style="margin-top: 6%">
+        <div class="header text-center">
+          <h3 class="title" style="font-size: 1.5rem; font-weight: 200">
+            Sweet Alert 2
+          </h3>
+          <p class="category">
+            A beautiful plugin, that replace the classic alert, Handcrafted by
+            our friend
+            <a target="_blank" href="https://twitter.com/t4t5"
+              >Tristan Edwards</a
+            >. Please check out the
+            <a href="https://sweetalert2.github.io/" target="_blank"
+              >full documentation.</a
+            >
+          </p>
+        </div>
+        <div class="places-sweet-alerts">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5>Basic example</h5>
+                  <button
+                    mat-raised-button=""
+                    class="btn btn-rose btn-fill mat-raised-button mat-button-base"
+                    fdprocessedid="tgzch8"
+                  >
+                    <span class="mat-button-wrapper">Try me!</span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5>A title with a text under</h5>
+                  <button
+                    mat-raised-button=""
+                    class="btn btn-rose btn-fill mat-raised-button mat-button-base"
+                    fdprocessedid="zh4c8n"
+                  >
+                    <span class="mat-button-wrapper">Try me!</span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5>A success message</h5>
+                  <button
+                    mat-raised-button=""
+                    class="btn btn-rose btn-fill mat-raised-button mat-button-base"
+                    fdprocessedid="swttlm"
+                  >
+                    <span class="mat-button-wrapper">Try me!</span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5>Custom HTML description</h5>
+                  <button
+                    mat-raised-button=""
+                    class="btn btn-rose btn-fill mat-raised-button mat-button-base"
+                    fdprocessedid="uz28o"
+                  >
+                    <span class="mat-button-wrapper">Try me!</span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5>
+                    A warning message, with a function attached to the "Confirm"
+                    Button...
+                  </h5>
+                  <button
+                    mat-raised-button=""
+                    class="btn btn-rose btn-fill mat-raised-button mat-button-base"
+                    fdprocessedid="37n8k"
+                  >
+                    <span class="mat-button-wrapper">Try me!</span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5>
+                    ...and by passing a parameter, you can execute something
+                    else for "Cancel"
+                  </h5>
+                  <button
+                    mat-raised-button=""
+                    class="btn btn-rose btn-fill mat-raised-button mat-button-base"
+                    fdprocessedid="izclro"
+                  >
+                    <span class="mat-button-wrapper">Try me!</span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5>A message with auto close timer set to 2 seconds</h5>
+                  <button
+                    mat-raised-button=""
+                    class="btn btn-rose btn-fill mat-raised-button mat-button-base"
+                    fdprocessedid="d46lyg"
+                  >
+                    <span class="mat-button-wrapper">Try me!</span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5>Modal window with input field</h5>
+                  <button
+                    mat-raised-button=""
+                    class="btn btn-rose btn-fill mat-raised-button mat-button-base"
+                    fdprocessedid="chvj9s"
+                  >
+                    <span class="mat-button-wrapper">Try me!</span>
+                    <div
+                      matripple=""
+                      class="mat-ripple mat-button-ripple"
+                    ></div>
+                    <div class="mat-button-focus-overlay"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- alert section ends-->
+
+      <!-- footer section starts-->
+      <footer class="footer">
+        <p>© 2024, made by Creative Tim for a better web.</p>
+      </footer>
+      <!-- footer section ends-->
+    </div>
+    <!-- main content ends-->
+    <script src="./script.js"></script>
+  </body>
+</html>

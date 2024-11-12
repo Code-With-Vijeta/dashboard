@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/layout-dashboard.svg"
+      type="image/x-icon"
+    />
+    <!--google font link-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <title>components</title>
+  </head>
+  <body>
+    <!-- sidebar section starts -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="https://demos.creative-tim.com/material-dashboard-pro-angular2/assets/img/angular2-logo-white.png"
+          alt="logo"
+        />
+        <h2>Creative Tim</h2>
+      </div>
+      <ul class="sidebar-links" style="padding-left: 0">
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Main Menu</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <!-- Dashboard -->
+        <li>
+          <a href="index.html">
+            <span class="material-symbols-outlined"> dashboard </span>Dashboard
+          </a>
+        </li>
+        <!-- Tables -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">grid_on</span>Tables
+          </a>
+        </li>
+        <!-- Components -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">apps</span>
+              Components</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="components-buttons.html">Buttons</a></li>
+            <li><a href="components-grid.html">Grid System</a></li>
+            <li><a href="components-panel.html">Panels</a></li>
+            <li><a href="components-alert.html">Sweet Alert</a></li>
+            <li><a href="components-notification.html">Notifications</a></li>
+            <li><a href="components-icon.html">Icons</a></li>
+            <li><a href="components-typography.html">Typography</a></li>
+          </ul>
+        </li>
+        <!-- Maps -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">place</span>Maps
+          </a>
+        </li>
+        <!-- Widgets -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> widgets </span>Widgets
+          </a>
+        </li>
+        <!-- Charts -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> timeline </span>Charts
+          </a>
+        </li>
+        <!-- Forms -->
+        <li class="collapsible">
+          <a href="#" class="collapsible-toggle">
+            <span style="display: flex; align-items: center; gap: 20px">
+              <span class="material-symbols-outlined">content_paste</span>
+              Forms</span
+            >
+
+            <span class="collapsible-icon"
+              ><span class="material-symbols-outlined" style="font-size: 17px">
+                keyboard_arrow_down
+              </span></span
+            >
+          </a>
+          <ul class="collapsible-content">
+            <li><a href="forms-regular.html">Regular Forms</a></li>
+            <li><a href="forms-extended.html">Extended Forms</a></li>
+          </ul>
+        </li>
+        <!-- Calender -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> date_range </span>Calender
+          </a>
+        </li>
+        <!-- Pages -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">image</span> Pages
+          </a>
+        </li>
+        <!-- Documentation -->
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> school </span>Documentation
+          </a>
+        </li>
+
+        <h4>
+          <span style="position: relative; bottom: 10px; font-size: small"
+            >Account</span
+          >
+          <div class="menu-seperator"></div>
+        </h4>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> account_circle </span
+            >Profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> settings </span>Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined"> logout </span>Logout
+          </a>
+        </li>
+      </ul>
+      <div class="user-account">
+        <div class="user-profile">
+          <img src="./images/profile-photo.jpg" alt="" alt="profile-img" />
+          <div class="user-detail" style="margin-left: 10px">
+            <h3>Vijeta Nehra</h3>
+            <span>Web Development</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- sidebar section ends -->
+
+    <!-- main content starts-->
+    <div class="main-content">
+      <!-- navbar -->
+      <div class="container-fluid navbar">
+        <div class="navbar-left">
+          <span><p style="color: grey; font-weight: 300">Panels</p></span>
+        </div>
+        <div class="navbar-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <span class="material-symbols-outlined">search</span>
+          </div>
+          <div class="notifications">
+            <span class="material-symbols-outlined" id="notification-icon"
+              >notifications</span
+            >
+            <span class="notification-badge">5</span>
+
+            <!--notifications -->
+            <div class="notification-popup" id="notification-popup">
+              <button class="close-btn" id="close-btn">&times;</button>
+              <div class="notification-item">
+                Mike John responded to your email
+              </div>
+              <div class="notification-item">You have 5 new tasks</div>
+              <div class="notification-item">You're now friend with Andrew</div>
+              <div class="notification-item">Another Notification</div>
+              <div class="notification-item">Another One</div>
+            </div>
+          </div>
+          <div class="user-icon">
+            <span class="material-symbols-outlined" style="color: black; cursor: pointer;">account_circle</span>
+          </div>
+        </div>
+        <!-- Mobile Navbar Toggle Button -->
+        <div class="mobile-navbar-toggle">
+          <span style="cursor: pointer" class="material-symbols-outlined"
+            >menu</span
+          >
+        </div>
+      </div>
+      <!-- navbar ends -->
+
+      <!-- panel section starts-->
+      <div class="container-fluid panels">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">
+                  Navigation Pills -
+                  <small class="description">Horizontal Tabs</small>
+                </h4>
+              </div>
+              <div class="card-body">
+                <ul role="tablist" class="nav nav-pills nav-pills-warning">
+                  <li class="nav-item">
+                    <a
+                      data-toggle="tab"
+                      href="#link1"
+                      role="tablist"
+                      class="nav-link active"
+                    >
+                      Profile
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      data-toggle="tab"
+                      href="#link2"
+                      role="tablist"
+                      class="nav-link"
+                    >
+                      Settings
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      data-toggle="tab"
+                      href="#link3"
+                      role="tablist"
+                      class="nav-link"
+                    >
+                      Options
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content tab-space">
+                  <div id="link1" class="tab-pane active">
+                    Collaboratively administrate empowered markets via
+                    plug-and-play networks. Dynamically procrastinate B2C users
+                    after installed base benefits. <br /><br />
+                    Dramatically visualize customer directed convergence without
+                    revolutionary ROI. Collaboratively administrate empowered
+                    markets via plug-and-play networks. Dynamically
+                    procrastinate B2C users after installed base benefits.
+                    <br /><br />
+                    This is very nice.
+                  </div>
+                  <div id="link2" class="tab-pane">
+                    Efficiently unleash cross-media information without
+                    cross-media value. Quickly maximize timely deliverables for
+                    real-time schemas. <br /><br />Dramatically maintain
+                    clicks-and-mortar solutions without functional solutions.
+                  </div>
+                  <div id="link3" class="tab-pane">
+                    Completely synergize resource taxing relationships via
+                    premier niche markets. Professionally cultivate one-to-one
+                    customer service with robust ideas. <br /><br />Dynamically
+                    innovate resource-leveling customer service for state of the
+                    art customer service.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">
+                  Navigation Pills -
+                  <small class="description">Vertical Tabs</small>
+                </h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <ul
+                      role="tablist"
+                      class="nav nav-pills nav-pills-rose flex-column"
+                    >
+                      <li class="nav-item">
+                        <a
+                          data-toggle="tab"
+                          href="#link4"
+                          role="tablist"
+                          class="nav-link active"
+                        >
+                          Profile
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          data-toggle="tab"
+                          href="#link5"
+                          role="tablist"
+                          class="nav-link"
+                        >
+                          Settings
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          data-toggle="tab"
+                          href="#link6"
+                          role="tablist"
+                          class="nav-link"
+                        >
+                          Options
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="tab-content">
+                      <div id="link4" class="tab-pane active">
+                        Collaboratively administrate empowered markets via
+                        plug-and-play networks. Dynamically procrastinate B2C
+                        users after installed base benefits. <br /><br />
+                        Dramatically maintain clicks-and-mortar solutions
+                        without functional solutions. Dramatically visualize
+                        customer directed convergence without revolutionary ROI.
+                        Collaboratively administrate empowered markets via
+                        plug-and-play networks. Dynamically procrastinate B2C
+                        users after installed base benefits. This is very nice.
+                      </div>
+                      <div id="link5" class="tab-pane">
+                        Efficiently unleash cross-media information without
+                        cross-media value. Quickly maximize timely deliverables
+                        for real-time schemas. <br /><br />Dramatically maintain
+                        clicks-and-mortar solutions without functional
+                        solutions.
+                      </div>
+                      <div id="link6" class="tab-pane">
+                        Completely synergize resource taxing relationships via
+                        premier niche markets. Professionally cultivate
+                        one-to-one customer service with robust ideas.
+                        <br /><br />Dynamically innovate resource-leveling
+                        customer service for state of the art customer service.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Collapsible Accordion</h4>
+              </div>
+              <div class="card-body">
+                <div id="accordion" role="tablist">
+                  <div class="card-collapse">
+                    <div role="tab" id="headingOne" class="card-header">
+                      <h5 class="mb-0">
+                        <a
+                          data-toggle="collapse"
+                          href="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                          class="collapsed"
+                          style="display: flex;
+                          justify-content: space-between;
+                          text-decoration: none;
+                          font-size: 0.8rem;"
+                        >
+                          Collapsible Group Item #1
+                          <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                            </span></a
+                        >
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      role="tabpanel"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordion"
+                      class="collapse show"
+                      style="font-size: 0.7rem;
+                      text-align: left;"
+                    >
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high
+                        life accusamus terry richardson ad squid. 3 wolf moon
+                        officia aute, non cupidatat skateboard dolor brunch.
+                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                        wolf moon tempor, sunt aliqua put a bird on it squid
+                        single-origin coffee nulla assumenda shoreditch et.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan
+                        excepteur butcher vice lomo. Leggings occaecat craft
+                        beer farm-to-table, raw denim aesthetic synth nesciunt
+                        you probably haven't heard of them accusamus labore
+                        sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-collapse">
+                    <div role="tab" id="headingTwo" class="card-header">
+                      <h5 class="mb-0">
+                        <a
+                          data-toggle="collapse"
+                          href="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                          class="collapsed"
+                          style="display: flex;
+                          justify-content: space-between;
+                          text-decoration: none;
+                          font-size: 0.8rem;"
+                        >
+                          Collapsible Group Item #2
+                          <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                            </span></a
+                        >
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      role="tabpanel"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordion"
+                      class="collapse"
+                      style="font-size: 0.7rem;
+                      text-align: left;"
+                    >
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high
+                        life accusamus terry richardson ad squid. 3 wolf moon
+                        officia aute, non cupidatat skateboard dolor brunch.
+                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                        wolf moon tempor, sunt aliqua put a bird on it squid
+                        single-origin coffee nulla assumenda shoreditch et.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan
+                        excepteur butcher vice lomo. Leggings occaecat craft
+                        beer farm-to-table, raw denim aesthetic synth nesciunt
+                        you probably haven't heard of them accusamus labore
+                        sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-collapse">
+                    <div role="tab" id="headingThree" class="card-header">
+                      <h5 class="mb-0">
+                        <a
+                          data-toggle="collapse"
+                          href="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                          class="collapsed"
+                          style="display: flex;
+                          justify-content: space-between;
+                          text-decoration: none;
+                          font-size: 0.8rem;"
+                        >
+                          Collapsible Group Item #3
+                          <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                            </span></a
+                        >
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      role="tabpanel"
+                      aria-labelledby="headingThree"
+                      data-parent="#accordion"
+                      class="collapse"
+                      style="font-size: 0.7rem;
+                      text-align: left;"
+                    >
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high
+                        life accusamus terry richardson ad squid. 3 wolf moon
+                        officia aute, non cupidatat skateboard dolor brunch.
+                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                        wolf moon tempor, sunt aliqua put a bird on it squid
+                        single-origin coffee nulla assumenda shoreditch et.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan
+                        excepteur butcher vice lomo. Leggings occaecat craft
+                        beer farm-to-table, raw denim aesthetic synth nesciunt
+                        you probably haven't heard of them accusamus labore
+                        sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">
+                  Navigation Pills Icons -
+                  <small class="description">Vertical Tabs</small>
+                </h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                    <ul
+                      role="tablist"
+                      class="nav nav-pills nav-pills-rose nav-pills-icons flex-column"
+                    >
+                      <li class="nav-item">
+                        <a
+                          data-toggle="tab"
+                          href="#link10"
+                          role="tablist"
+                          class="nav-link active"
+                          ><i class='bx bxs-dashboard'></i>Home
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          data-toggle="tab"
+                          href="#link11"
+                          role="tablist"
+                          class="nav-link"
+                          ><i class='bx bx-time-five'></i> Settings
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="tab-content">
+                      <div id="link10" class="tab-pane active">
+                        Collaboratively administrate empowered markets via
+                        plug-and-play networks. Dynamically procrastinate B2C
+                        users after installed base benefits. <br /><br />
+                        Dramatically visualize customer directed convergence
+                        without revolutionary ROI. Collaboratively administrate
+                        empowered markets via plug-and-play networks.
+                        Dynamically procrastinate B2C users after installed base
+                        benefits. <br /><br />
+                        Dramatically visualize customer directed convergence
+                        without revolutionary ROI. Collaboratively administrate
+                        empowered markets via plug-and-play networks.
+                        Dynamically procrastinate B2C users after installed base
+                        benefits.
+                      </div>
+                      <div id="link11" class="tab-pane">
+                        Efficiently unleash cross-media information without
+                        cross-media value. Quickly maximize timely deliverables
+                        for real-time schemas. <br /><br />Dramatically maintain
+                        clicks-and-mortar solutions without functional
+                        solutions.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <div class="page-categories">
+              <h3 class="title text-center" style="font-size: large;">Page Subcategories</h3>
+              <br />
+              <ul
+                role="tablist"
+                class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center"
+              >
+                <li class="nav-item">
+                  <a
+                    data-toggle="tab"
+                    href="#link7"
+                    role="tablist"
+                    class="nav-link"
+                    ><i class='bx bxs-info-circle'></i> Description
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    data-toggle="tab"
+                    href="#link8"
+                    role="tablist"
+                    class="nav-link active"
+                    ><i class='bx bxs-location-plus'></i> Location
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    data-toggle="tab"
+                    href="#link9"
+                    role="tablist"
+                    class="nav-link"
+                    ><i class='bx bx-comment-edit' ></i> Legal Info
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    data-toggle="tab"
+                    href="#link10"
+                    role="tablist"
+                    class="nav-link"
+                    ><i class='bx bx-help-circle'></i> Help Center
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content tab-space tab-subcategories">
+                <div id="link7" class="tab-pane">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Description about product</h4>
+                      <p class="card-category">More information here</p>
+                    </div>
+                    <div class="card-body">
+                      Collaboratively administrate empowered markets via
+                      plug-and-play networks. Dynamically procrastinate B2C
+                      users after installed base benefits. <br /><br />
+                      Dramatically visualize customer directed convergence
+                      without revolutionary ROI.
+                    </div>
+                  </div>
+                </div>
+                <div id="link8" class="tab-pane active">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Location of the product</h4>
+                      <p class="card-category">More information here</p>
+                    </div>
+                    <div class="card-body">
+                      Efficiently unleash cross-media information without
+                      cross-media value. Quickly maximize timely deliverables
+                      for real-time schemas. <br /><br />
+                      Dramatically maintain clicks-and-mortar solutions without
+                      functional solutions.
+                    </div>
+                  </div>
+                </div>
+                <div id="link9" class="tab-pane">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Legal info of the product</h4>
+                      <p class="card-category">More information here</p>
+                    </div>
+                    <div class="card-body">
+                      Completely synergize resource taxing relationships via
+                      premier niche markets. Professionally cultivate one-to-one
+                      customer service with robust ideas.
+                      <br /><br />Dynamically innovate resource-leveling
+                      customer service for state of the art customer service.
+                    </div>
+                  </div>
+                </div>
+                <div id="link10" class="tab-pane">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Help center</h4>
+                      <p class="card-category">More information here</p>
+                    </div>
+                    <div class="card-body">
+                      From the seamless transition of glass and metal to the
+                      streamlined profile, every detail was carefully considered
+                      to enhance your experience. So while its display is
+                      larger, the phone feels just right. <br /><br />
+                      Another Text. The first thing you notice when you hold the
+                      phone is how great it feels in your hand. The cover glass
+                      curves down around the sides to meet the anodized aluminum
+                      enclosure in a remarkable, simplified design.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- panel section ends-->
+
+      <!-- footer section starts-->
+      <footer class="footer">
+        <p>© 2024, made by Creative Tim for a better web.</p>
+      </footer>
+      <!-- footer section ends-->
+    </div>
+    <!-- main content ends-->
+
+      <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
